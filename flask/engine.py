@@ -11,7 +11,7 @@ from speechToText import recognize_speech
 from textToSpeech import speak
 
 
-app=Flask(__name__)
+app=Flask(__name__,static_folder='static')
 model=SentenceTransformer('all-MiniLM-L6-v2')
 df=pd.read_csv('faq_questions1_answered (1).csv')
 
